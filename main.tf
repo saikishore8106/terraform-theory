@@ -1,13 +1,9 @@
 
 provider "aws" {
-  region = "us-east-1"
+  region = "eu-north-1"
 }
 
 resource "aws_instance" "demo" {
-  ami           = "ami-0c02fb55956c7d316" # Ubuntu 22.04 in us-east-1
-  instance_type = "t2.micro"
-
-  tags = {
-    Name = "simple-terraform-instance"
-  }
+  ami           = "ami-0a716d3f3b16d290c" # Ubuntu AMI for eu-north-1
+  instance_type = "t3.micro"
 }
