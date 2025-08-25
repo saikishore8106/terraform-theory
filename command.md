@@ -17,17 +17,28 @@ sudo apt update
 sudo apt install terraform -y
 
 # Verify installation
-terraform -version
+terraform -version# Update system
 
-# Download AWS CLI v2 package
+
+
+# Update system
+sudo apt update -y
+
+# Install unzip (needed to extract the AWS CLI zip)
+sudo apt install unzip -y
+
+# Download the AWS CLI v2 installer
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 
-# Unzip
+# Unzip the installer
 unzip awscliv2.zip
 
-# Install
+# Run the installer
 sudo ./aws/install
 
-# Verify
+# Verify the installation
 aws --version
+
+
+
 
